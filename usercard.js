@@ -19,7 +19,7 @@ var comment = "";
 //capture button click
 $("#add-user").on("click", function(event) {
   event.preventDefault();
-
+  
   //storing and retrieving users
   name = $("#name-input").val().trim();
   phone = $("#phone-input").val().trim();
@@ -36,15 +36,20 @@ $("#add-user").on("click", function(event) {
     comment: comment,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   })
-
+});
+  var playerCount = 0;
   //Firebase watcher and initial loader
   dataref.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
 
+    playerCount++;
+
     //Full member list
-    $("#full-member-list").append("<div class='well'><span class='member-name'> " + 
-    childSnapshot.val().name + "</span></div>")
+    $(".full-member-list").append("<div class='well'><span class='member-name'> " + 
+    "<span class='member text-warning'>"+ "Player " + playerCount + "</span> " + "  @" + childSnapshot.val().name + " "
+      + "</span><span class='member-dateAdded'>" 
+      + "<span class='member text-warning'>" + "Note :  #"+ "</span>" + childSnapshot.val().comment+ "</span></div>")
   }, function(errorObject) {
-      console.log("Error: " + errorObject.code);
-  });
-})
+       console.log("Error: " + errorObject.code);
+     }
+  );

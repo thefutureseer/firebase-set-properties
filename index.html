@@ -2,7 +2,7 @@
 <html lang="eng">
  <head>
   <meta charset="UTF-8">
-  <title>Play firebase</title>
+  <title>Play with firebase</title>
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- firebase -->
@@ -13,8 +13,8 @@
    <div class="container">
     <br>
     <!-- JumboTron -->
-    <div class="jumbotron" style="background-color: #00bcd4;">
-      <h1 class="text-center" style="color: antiquewhite;">Settle the score</h1>
+    <div class="jumbotron bg-success">
+      <h1 class="text-center text-white" >Settle the score</h1>
     </div>
   
     <div class="row">
@@ -22,35 +22,35 @@
      <!-- Sign up card -->
      <div class="col-lg-6" > 
       <div class="card card-default">
-        <div class="card-header"style="background-color: black; color: antiquewhite;">
+        <div class="card-header bg-dark text-white">
           Sign up here:
         </div>
-        <div class="card-body" style="background-color: black;">
+        <div class="card-body bg-dark">
          <!-- card body 4 inputs -->
          <form role="form">
   
           <div class="form-group row">
-            <label for="name-input" style="color: antiquewhite;">Name:</label>
+            <label for="name-input" class="text-white">Name:</label>
             <input type="text" class="form-control" id="name-input">
           </div>
           <div class="form-group row">
-            <label for="phone-input" style="color: antiquewhite;">Phone:</label>
+            <label for="phone-input" class="text-white">Phone:</label>
             <input type="number" class="form-control" id="phone-input">
           </div>
             <div class="form-group row">
-              <label for="email-input" style="color: antiquewhite;">Email:</label>
+              <label for="email-input" class="text-white">Email:</label>
               <input type="email" class="form-control" id="email-input">
             </div>
             <div class="form-group row">
-              <label for="location-input" style="color: antiquewhite;">Location:</label>
+              <label for="location-input" class="text-white">Location:</label>
               <input type="text" class="form-control" id="location-input">
             </div>
             <div class="form-group row">
-              <label for="comment-input" style="color: antiquewhite;">Request and suggestion box:</label>
+              <label for="comment-input" class="text-white">Request & suggestion box:</label>
               <textarea rows="5" class="form-control" id="comment-input"></textarea>
             </div>
-            <button class="btn btn-default" id="add-user" type="submit" 
-              style="background-color: black; border: 1px solid; color: antiquewhite;">
+            <button class="btn btn-default bg-dark text-white" id="add-user" type="submit" 
+              style=" border: 1px solid;">
                 new player
             </button>
           </form>
@@ -62,10 +62,10 @@
      <div class="col-lg-6">
       <div class="panel panel-default">
        <div class="panel-heading">
-        <h3 class="panel-title" style="text-align:center">Add all players</h3>
+        <h3 class="panel-title text-center">All Players</h3>
        </div>
-       <div class="panel-body" id="mini-scorecard">
-        <h2 id="full-member-list"></h2>
+       <div class="panel-body" id="scorecard-list">
+        <h2 class="full-member-list text-center"></h2>
        </div>
       </div>
      </div>
