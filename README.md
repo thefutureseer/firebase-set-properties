@@ -1,1 +1,1 @@
-# firebase-set-properties
+# firebase-properties
