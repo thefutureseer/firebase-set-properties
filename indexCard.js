@@ -1,7 +1,14 @@
 //Initialize firebase
 
 const config = {
-
+  apiKey: "AIzaSyDOB8s4ge4SI1FejaQHDgfWD_QggbDjmlo",
+  authDomain: "settle-34657.firebaseapp.com",
+  databaseURL: "https://settle-34657.firebaseio.com",
+  projectId: "settle-34657",
+  storageBucket: "settle-34657.appspot.com",
+  messagingSenderId: "961536366124",
+  appId: "1:961536366124:web:c50f42e52b048c1351e389",
+  measurementId: "G-PEGVT2R2ER"
 }
 
 firebase.initializeApp(config);
@@ -47,8 +54,8 @@ $("#add-user").on("click", function(event) {
     //Full member list
     $(".full-member-list").append("<div class='well'><span class='member-name'> " + 
     "<span class='member text-warning'>"+ "Player " + playerCount + "</span> " + "  @" + childSnapshot.val().name + " "
-      + "</span><span class='member-dateAdded'>" 
-      + "<span class='member text-warning'>" + "Note :  #"+ "</span>" + childSnapshot.val().comment+ "</span></div>")
+      + "</span><br><span class='member-dateAdded'>" 
+      + "<span class='member text-warning'>" + "Note :  #"+ "</span>" + childSnapshot.val().comment+ "</span><hr></div>")
   }, function(errorObject) {
        console.log("Error: " + errorObject.code);
      }
