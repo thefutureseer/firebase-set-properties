@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="eng">
+ <head>
+  <meta charset="UTF-8">
+  <title>Play firebase</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  </head>
+  <body>
+  
+   <div class="container">
+    <br>
+    <!-- JumboTron -->
+    <div class="jumbotron" style="background-color: #00bcd4;">
+      <h1 class="text-center" style="color: antiquewhite;">Settle the score</h1>
+    </div>
+  
+    <div class="row">
+  
+     <!-- Sign up card -->
+     <div class="col-lg-6" > 
+      <div class="card card-default">
+        <div class="card-header"style="background-color: black; color: antiquewhite;">
+          Sign up here:
+        </div>
+        <div class="card-body" style="background-color: black;">
+         <!-- card body 4 inputs -->
+         <form role="form">
+  
+          <div class="form-group row">
+            <label for="name-input" style="color: antiquewhite;">Name:</label>
+            <input type="text" class="form-control" id="name-input">
+          </div>
+          <div class="form-group row">
+            <label for="phone-input" style="color: antiquewhite;">Phone:</label>
+            <input type="number" class="form-control" id="phone-input">
+          </div>
+            <div class="form-group row">
+              <label for="email-input" style="color: antiquewhite;">Email:</label>
+              <input type="email" class="form-control" id="email-input">
+            </div>
+            <div class="form-group row">
+              <label for="age-input" style="color: antiquewhite;">Age:</label>
+              <input type="number" class="form-control" id="age-input">
+            </div>
+            <div class="form-group row">
+              <label for="comment-input" style="color: antiquewhite;">Request and suggestion box:</label>
+              <textarea rows="5" class="form-control" id="comment-input"></textarea>
+            </div>
+            <button class="btn btn-default" id="add-user-2" type="submit" 
+              style="background-color: black; border: 1px solid; color: antiquewhite;">
+                new player
+            </button>
+          </form>
+        </div>
+      </div>
+     </div>
+     <!-- form end  -->
+     <!-- Panel showing what scorecard will look like: -->
+     <div class="col-lg-6">
+      <div class="panel panel-default">
+       <div class="panel-heading">
+        <h3 class="panel-title" style="text-align:center">YOUR SCORECARD</h3>
+       </div>
+       <div class="panel-body" id="mini-scorecard">
+        <h2 class="name-display">name</h2>
+        <h4 class="phone-display">phone</h4>
+        <h4 class="email-display">email</h4>
+        <h4 class="age-display">age</h4>
+        <p class="comment-display">comment</p>
+       </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="usercard.js"></script>
+</body>
+
+</html>
