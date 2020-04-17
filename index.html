@@ -42,14 +42,14 @@
               <input type="email" class="form-control" id="email-input">
             </div>
             <div class="form-group row">
-              <label for="age-input" style="color: antiquewhite;">Age:</label>
-              <input type="number" class="form-control" id="age-input">
+              <label for="location-input" style="color: antiquewhite;">Location:</label>
+              <input type="text" class="form-control" id="location-input">
             </div>
             <div class="form-group row">
               <label for="comment-input" style="color: antiquewhite;">Request and suggestion box:</label>
               <textarea rows="5" class="form-control" id="comment-input"></textarea>
             </div>
-            <button class="btn btn-default" id="add-user-2" type="submit" 
+            <button class="btn btn-default" id="add-user" type="submit" 
               style="background-color: black; border: 1px solid; color: antiquewhite;">
                 new player
             </button>
@@ -62,20 +62,17 @@
      <div class="col-lg-6">
       <div class="panel panel-default">
        <div class="panel-heading">
-        <h3 class="panel-title" style="text-align:center">YOUR SCORECARD</h3>
+        <h3 class="panel-title" style="text-align:center">Add all players</h3>
        </div>
        <div class="panel-body" id="mini-scorecard">
-        <h2 class="name-display">name</h2>
-        <h4 class="phone-display">phone</h4>
-        <h4 class="email-display">email</h4>
-        <h4 class="age-display">age</h4>
-        <p class="comment-display">comment</p>
+        <h2 id="full-member-list"></h2>
        </div>
       </div>
      </div>
     </div>
   </div>
   <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="usercard.js"></script>
 </body>
 
