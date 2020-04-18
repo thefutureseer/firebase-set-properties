@@ -2,11 +2,6 @@
 <html lang="eng">
  <head>
   <meta charset="UTF-8">
-  <style>
-    .btn-outline-warning {
-      margin-left: 29em;
-    }
-  </style>
   <title>Play with firebase</title>
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -18,33 +13,37 @@
     <br>
     <!-- JumboTron -->
     <div class="jumbotron bg-success">
-      <h1 class="text-center text-white display-3 font-weight-bold" >All Players</h1>
-       <div class="select"> 
-        <label for="player-list" class="font-weight-bold text-warning" >Who's turn is it? : </label>
-          <select id="player-list" class="players-select text-white">
-            <!-- <option value="players" class="players-select"></option> -->
-          </select>
-       </div>  
+      <h1 class="text-center text-white display-2 font-weight-bold" >All Players</h1>
+      <div class="text-center">
+        <a class="btn-back font-weight-bold display-5" type="link" href="index.html ">go back</a>
+      </div>
     </div>
-  
+    
+    <!-- Show location at the top blue -->
+    <p class="location font-weight-bold text-center display-4">location</p>
     <div class="row">
-  
-     <!-- Sign up card -->
-     <div class="col-lg-6" > 
-      <div class="card card-default">
-        <div class="card-header bg-dark text-white">
-          Track Player:
-        </div>
-        <div class="card-body bg-dark">
-         <!-- card body 4 inputs -->
-         <form role="form">
-  
-          <div class="form-group row">
-            <label for="name-input" class="text-white">Current Player:  NAME GOES HERE</label>
-            <!-- <input type="text" class="form-control" id="name-input"> -->
+      
+      <!-- Sign up card -->
+      <div class="col-lg-6" > 
+        <div class="card card-default">
+          <div class="card-header bg-dark text-white text-center">
+            TRACK PLAYER
+          </div>
+          <div class="card-body bg-dark">
+            <!-- card body 4 inputs -->
+            <form role="form">
+              
+              <div class="form-group row ml-5">
+                    <div class="select-div">
+                     <label for="player-list" class="font-weight-bold text-warning">Who's turn is it? : </label>
+                       <select id="player-list" class="players-select text-white bg-dark">
+                         <!-- <option value="players" class="players-select"></option> -->
+                       </select>
+                    </div>  
           </div>
           <div class="form-group row">
-            <label for="score-input" class="text-white">* enter score:</label>
+            <label for="score-input" class="text-primary">current score: ______ </label>
+            <!-- <label for="score-input" class="text-white"> * enter score: </label> -->
             <input type="number" class="form-control" id="score-input">
           </div>
             <!-- <div class="form-group row">
@@ -65,16 +64,16 @@
      </div>
 
      <!-- Panel showing whos winning: -->
-     <!-- <div class="col-lg-6">
+     <div class="col-lg-6">
       <div class="panel panel-default">
        <div class="panel-heading">
-        <h3 class="panel-title text-center">ALL PLAYERS</h3>
+        <h3 class="panel-title text-center">Who's winning</h3>
        </div>
        <div class="panel-body" id="scorecard-list">
-        <h2 class="full-member-list"></h2>
+        <h2 class="member-list"></h2>
        </div>
       </div>
-     </div> -->
+     </div>
 
     </div>
   </div>

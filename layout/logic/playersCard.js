@@ -37,18 +37,35 @@ $("#payer-user").on("click", function(event) {
 });
 
   var playerCount = 0;
-  //Firebase watcher and initial loader
+  //Firebase watcher and initial load to Players card
   dataref.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
+    
+    //Add location to top
+    $(".location").text("Todays location: " + childSnapshot.val().loca);
 
     playerCount++;
 
     //Full member list add as many as you want
-    $(".players-select").append(
-      "<option class='well'><span class='member-name'> " + "<span class='member text-warning'>"
-      + "Player " + playerCount + "</span> " + "  @" + childSnapshot.val().name + " " + "</span><hr></option>"
+    $("select.players-select, h2.member-list").append(
+      "<option class='well'><span class='member-name'> " + "Player " + playerCount + "</span> " + 
+      "<span class='member text-warning'>" + "  @" + childSnapshot.val().name + " " + 
+      "</span><span>"+ score + "</span><hr></option>"
     );
   }, function(errorObject) {
        console.log("Error: " + errorObject.code);
      }
   );
+
+    //Grab current player from drop down put info in card 
+    // $(document).on("change", ".players-select", function() {
+    //   alert($(this).find("option:selected").text());
+    // });
+
+    //alternate
+    $(document).on("change", ".players-select", function() {
+      $(".track-player").html(this).find("option:selected").val();
+    });
+
+  //TO DO LOAD THE PLAYERS NAMES etc
+  

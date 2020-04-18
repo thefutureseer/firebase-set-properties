@@ -2,7 +2,7 @@
 
 const config = {
 
-}
+};
 
 firebase.initializeApp(config);
 
@@ -37,6 +37,7 @@ $("#add-user").on("click", function(event) {
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   })
 });
+
   var playerCount = 0;
   //Firebase watcher and initial loader
   dataref.ref().on("child_added", function(childSnapshot) {
@@ -47,7 +48,7 @@ $("#add-user").on("click", function(event) {
     //Full member list add as many as you want
     $(".full-member-list").append("<div class='well'><span class='member-name'> " + 
     "<span class='member text-warning'>"+ "Player " + playerCount + "</span> " + "  @" + childSnapshot.val().name + " "
-      + "</span><br><span class='member-dateAdded'>" 
+      + "</span><br><span class='member-dateAdded'>" + "Score: 0" + "<br>"
       + "<span class='member text-warning'>" + "Note :  #"+ "</span>" + childSnapshot.val().comment+ "</span><hr></div>")
   }, function(errorObject) {
        console.log("Error: " + errorObject.code);
