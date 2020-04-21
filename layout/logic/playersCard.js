@@ -1,7 +1,14 @@
 //Initialize firebase
 
 const config = {
-
+  apiKey: "AIzaSyDOB8s4ge4SI1FejaQHDgfWD_QggbDjmlo",
+  authDomain: "settle-34657.firebaseapp.com",
+  databaseURL: "https://settle-34657.firebaseio.com",
+  projectId: "settle-34657",
+  storageBucket: "settle-34657.appspot.com",
+  messagingSenderId: "961536366124",
+  appId: "1:961536366124:web:c50f42e52b048c1351e389",
+  measurementId: "G-PEGVT2R2ER"
 }
 
 firebase.initializeApp(config);
