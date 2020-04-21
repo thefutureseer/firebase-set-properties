@@ -53,21 +53,24 @@ $("#payer-user").on("click", function(event) {
 
     playerCount++;
 
-    //Full member list add as many as you want
-    $("select.players-select, h2.member-list").append(
+    //Full member list in select box
+    $("select.players-select").append(
       "<option class='well'><span class='member-name'> " + "Player " + playerCount + "</span> " + 
-      "<span class='member text-warning'>" + "  @" + childSnapshot.val().name + " " + 
-      "</span><span>"+ score + "</span><hr></option>"
+      "<span class='member'>" + "  @" + childSnapshot.val().name + " " + 
+      "</span><hr></option>"
     );
+
+        //Full member list in select box
+        $(".member-list").append(
+          "<div class='well'><span class='member-name'> " + "Player " + playerCount + "</span> " + 
+          "<span class='member text-warning'>" + "  @" + childSnapshot.val().name + " " + 
+          "</span><span class='score text-success'>" + " score : " + score + "</span><hr></div>"
+        );
+
   }, function(errorObject) {
        console.log("Error: " + errorObject.code);
      }
   );
-
-    //Grab current player from drop down put info in card 
-    // $(document).on("change", ".players-select", function() {
-    //   alert($(this).find("option:selected").text());
-    // });
 
     //alternate
     $(document).on("change", ".players-select", function() {

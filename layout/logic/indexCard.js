@@ -59,7 +59,7 @@ $("#add-user").on("click", function(event) {
      "<span class='member text-danger' placeholder='good, bad, ugly ..'>" + "Note :  #" 
      + childSnapshot.val().comment+ "</span><hr></div>");
 
-     $("#name-input").val(" ");
+     $("#name-input").val("");
      $("#phone-input").val("");
      $("#email-input").val("");
      $("#location-input").val("");
