@@ -54,9 +54,17 @@ $("#add-user").on("click", function(event) {
 
     //Full member list add as many as you want
     $(".full-member-list").append("<div class='well'><span class='member-name'> " + 
-    "<span class='member text-warning'>"+ "Player " + playerCount + "</span> " + "  @" + childSnapshot.val().name + " "
-      + "</span>" + "<br>"
-      + "<span class='member text-danger'>" + "Note :  #" + childSnapshot.val().comment+ "</span><hr></div>")
+     "<span class='member text-warning'>"+ "Player " + playerCount + "</span> " + "  @" 
+     + childSnapshot.val().name + " " + "</span>" + "<br>" +
+     "<span class='member text-danger' placeholder='good, bad, ugly ..'>" + "Note :  #" 
+     + childSnapshot.val().comment+ "</span><hr></div>");
+
+     $("#name-input").val(" ");
+     $("#phone-input").val("");
+     $("#email-input").val("");
+     $("#location-input").val("");
+     $("#comment-input").val("");
+
   }, function(errorObject) {
        console.log("Error: " + errorObject.code);
      }
